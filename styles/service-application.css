@@ -1,0 +1,1363 @@
+/* --------------------------------fonts-------------------------------------- */
+@font-face {
+  font-family: "NotoSansKRB";
+  src: url("../assets/fonts/NotoSansKR-Bold.otf");
+}
+@font-face {
+  font-family: "NotoSansKRM";
+  src: url("../assets/fonts/NotoSansKR-Medium.otf");
+}
+@font-face {
+  font-family: "NotoSansKRR";
+  src: url("../assets/fonts/NotoSansKR-Regular.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* --------------------------------navbar-------------------------------------- */
+.navbar {
+  padding: 12px;
+}
+
+.navbar_container {
+  padding: 6px 0;
+}
+
+.header_image {
+  height: 28px;
+  width: 56px;
+}
+
+.navbar-brand {
+  font-weight: 500;
+  margin-left: 5px;
+  font-family: "NotoSansKRM";
+}
+
+@media screen and (min-width: 991px) {
+  .navbar-nav {
+    margin-left: 20px;
+  }
+  .navbar-nav > li {
+    margin-left: 40px;
+    font-size: 1.25rem;
+    font-family: "NotoSansKRR";
+  }
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+.navbar-nav > li {
+  font-size: 1.25rem;
+  font-family: "NotoSansKRR";
+}
+
+.dropdown-menu > li > a:active {
+  color: #dd695d;
+  background-color: transparent;
+  text-decoration: underline;
+  opacity: 1;
+}
+
+.dropdown-menu > li > a {
+  font-family: "NotoSansKRR";
+  opacity: 0.5;
+  font-size: 1.25rem;
+}
+
+.navbar-nav .active_sub_item {
+  font-family: "NotoSansKRM";
+  opacity: 0.8;
+}
+
+.navbar-nav .active {
+  font-weight: bold;
+  font-family: "NotoSansKRM";
+}
+
+.navbar-nav > li:hover {
+  font-family: "NotoSansKRR";
+  font-size: 1.25rem;
+}
+
+.dropdown-item {
+  font-family: "NotoSansKRR";
+  font-size: 1rem;
+  font-weight: 200;
+  opacity: 0.8;
+}
+
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+
+.d-flex img {
+  height: 21px;
+  width: 23px;
+}
+
+.d-flex div {
+  margin-left: 10px;
+  font-family: "NotoSansKRM";
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+.d-flex:hover {
+  cursor: pointer;
+}
+
+/* ----------------------------------Application form tabs---------------------------------------- */
+
+.tabs_section {
+  /* background: url("../assets/service_application_section.svg") no-repeat; */
+  background: url("../assets/service_application_section.png") no-repeat;
+  width: 100%;
+  background-size: cover;
+}
+
+.navigation_banner {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 120px;
+  display: flex;
+  align-items: flex-end;
+  padding: 12px 25px;
+}
+
+.navigation_banner div {
+  margin-left: 9px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 200;
+  opacity: 0.5;
+  font-family: "NotoSansKRR";
+}
+
+@media screen and (max-width: 575px) {
+  .navbar {
+    padding: 0;
+  }
+
+  .navigation_banner {
+    padding: 12px;
+  }
+}
+
+.tabs_container {
+  margin-top: 100px;
+  padding: 0 0 30px 0;
+}
+
+.tabs_container_title {
+  font-size: 1.75rem;
+  font-family: "NotoSansKRM";
+  font-weight: 500;
+  color: #fff;
+}
+
+/* ----------------------------breadcrumb with image---------------------- */
+
+/* .breadcrumb_container {
+  display: flex;
+  margin-top: 14px;
+  width: 100%;
+  border: 1px solid #fff;
+  border-radius: 10px;
+}
+
+.breadcrumb_tab_container {
+  width: 33%;
+  display: flex;
+  position: relative;
+  cursor: pointer;
+}
+
+.breadcrumb_tab_container img {
+  width: 100%;
+  height: 100%;
+}
+
+.breadcrumb_tab_container div {
+  color: #fff;
+  font-size: 1.125rem;
+  font-family: "NotoSansKRR";
+  font-weight: 400;
+  position: absolute;
+  left: 33%;
+  top: 25%;
+}
+
+@media screen and (max-width: 1400px) {
+  .breadcrumb_tab_container div {
+    top: 20%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .breadcrumb_tab_container div {
+    top: 15%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .breadcrumb_tab_container {
+    height: 30px;
+  }
+
+  .breadcrumb_tab_container div {
+    top: 8%;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .breadcrumb_container {
+    border-radius: 6px;
+  }
+
+  .breadcrumb_tab_container {
+    height: 22px;
+  }
+
+  .breadcrumb_tab_container div {
+    top: 12%;
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .breadcrumb_tab_container div {
+    top: 12%;
+    font-size: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .breadcrumb_container {
+    border-radius: 4px;
+  }
+
+  .breadcrumb_tab_container {
+    height: 16px;
+  }
+
+  .breadcrumb_tab_container div {
+    top: 1px;
+    font-size: 0.6rem;
+  }
+} */
+
+/* ----------------------------breadcrumb New---------------------- */
+
+.breadcrumb_container {
+  display: flex;
+  margin-top: 14px;
+  width: 100%;
+}
+
+.breadcrumb_container div {
+  height: 44px;
+  width: 33%;
+  border: 1px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 1.125rem;
+  font-family: "NotoSansKRR";
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.breadcrumb_container div:first-child {
+  border-radius: 8px 0 0 8px;
+}
+
+.breadcrumb_container div:last-child {
+  border-radius: 0 8px 8px 0;
+}
+
+.breadcrumb_container .active {
+  background-color: #383838;
+  opacity: 0.85;
+}
+
+@media screen and (max-width: 575px) {
+  .breadcrumb_container div {
+    height: 35px;
+    font-size: 0.8rem;
+  }
+}
+
+/* ----------------------------breadcrumb old---------------------- */
+/* .breadcrumb {
+  list-style: none;
+  overflow: hidden;
+  font-size: 1.12rem;
+  font-family: "NotoSansKRR";
+  font-weight: 500;
+  margin-top: 14px;
+}
+
+.breadcrumb li {
+  float: left;
+}
+
+.breadcrumb li a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 141px;
+  background: transparent;
+  border: 0.5px solid #fff;
+  position: relative;
+  display: block;
+  float: left;
+  cursor: pointer;
+}
+
+.breadcrumb .active {
+  background-color: #383838;
+  opacity: 0.85;
+}
+
+@media screen and (min-width: 1400px) {
+  .breadcrumb li a {
+    padding: 8px 171px;
+  }
+} */
+
+/* .breadcrumb li a::after {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 30px solid #383838;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  left: 100%;
+  z-index: 2;
+}
+
+.breadcrumb li a::before {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 30px solid white;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  margin-left: 1px;
+  left: 100%;
+  z-index: 1;
+} */
+
+/* .breadcrumb li:last-child a::after {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 0px solid transparent;
+  border-bottom: 0px solid transparent;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  left: 100%;
+  z-index: 2;
+}
+
+.breadcrumb li:last-child a::before {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 30px solid transparent;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  margin-left: 1px;
+  left: 100%;
+  z-index: 1;
+} */
+
+/* ----------------------------------agreement_tab content---------------------------------------- */
+.tab_content {
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 50px 0;
+}
+
+.tab_one_box {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 24px 104px 24px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 411px;
+  overflow: auto;
+}
+
+.tab_one_box_title {
+  font-size: 1.25rem;
+  font-family: "NotoSansKRM";
+  font-weight: 500;
+}
+
+.tab_one_box_description {
+  font-size: 1.12rem;
+  font-family: "NotoSansKRR";
+  margin-top: 24px;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  border: 1px solid #d2d2d2;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d2d2d2;
+  border-radius: 6px;
+}
+
+.term_agreement_container {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.term_agreement_container input {
+  height: 22px;
+  width: 22px;
+  margin-top: 4px;
+}
+
+.term_agreement_text {
+  font-size: 1.06rem;
+  font-family: "NotoSansKRR";
+  font-weight: 400;
+  margin-left: 10px;
+}
+
+.term_agreement_button_container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.term_agreement_button {
+  background: #dd695d;
+  height: 48px;
+  width: 128px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  font-size: 1.06rem;
+  font-family: "NotoSansKRR";
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.term_agreement_button:hover {
+  opacity: 1;
+}
+
+@media screen and (max-width: 575px) {
+  .tab_one_box {
+    padding: 24px;
+    height: 411px;
+  }
+}
+
+/* ----------------------------------application_form_tab content---------------------------------------- */
+.application_form_content {
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 50px 0;
+}
+
+.application_form__box {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 48px 80px;
+}
+
+.application_form_divider_line_dark {
+  width: 100%;
+  height: 2px;
+  background-color: #909090;
+  margin-top: 18px;
+}
+
+.application_form_divider_line_light {
+  width: 100%;
+  height: 1px;
+  background-color: #bababa;
+  margin-top: 4px;
+}
+
+.buisness_info_container > div {
+  color: #dd695d;
+  font-family: "NotoSansKRR";
+  font-weight: 400;
+  font-size: 1.36rem;
+}
+
+.buisness_info_container p {
+  color: #909090;
+  font-family: "NotoSansKRR";
+  font-weight: 200;
+  font-size: 0.813rem;
+  margin: 26px 0 0 0;
+}
+
+.buisness_info_container input {
+  color: #383838;
+  font-family: "NotoSansKRR";
+  font-weight: 400;
+  font-size: 0.938rem;
+  outline: none;
+  width: 100%;
+  border: none;
+  margin-top: 9px;
+}
+
+.input_button_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input_button_container button {
+  height: 35px;
+  width: 99px;
+  background-color: #909090;
+  color: #fff;
+  font-family: "NotoSansKRR";
+  font-weight: 400;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-top: 2px;
+}
+
+.buisness_info_container span {
+  color: #dd695d;
+  font-family: "NotoSansKRR";
+  font-weight: 200;
+  font-size: 0.813rem;
+  margin-top: 2px;
+}
+
+.applicant_info_container {
+  margin-top: 48px;
+}
+
+.applicant_info_container > div {
+  color: #dd695d;
+  font-family: "NotoSansKRR";
+  font-weight: 400;
+  font-size: 1.36rem;
+}
+
+.applicant_info_container p {
+  color: #909090;
+  font-family: "NotoSansKRR";
+  font-weight: 200;
+  font-size: 0.813rem;
+  margin: 26px 0 0 0;
+}
+
+.radio_button_container label {
+  margin-right: 55px;
+  font-size: 0.938rem;
+  font-family: "NotoSansKRR";
+  font-weight: 400;
+  color: #909090;
+  margin-left: 6px;
+}
+
+.radio_button_container input[type="radio"]:checked + label {
+  color: #383838;
+}
+
+.department_input_button_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.department_input_button_container input {
+  color: #383838;
+  font-family: "NotoSansKRR";
+  font-weight: 400;
+  font-size: 0.938rem;
+  outline: none;
+  width: 100%;
+  border: none;
+  margin-top: 9px;
+}
+
+.department_input_button_container button {
+  height: 35px;
+  width: 70px;
+  background-color: #909090;
+  color: #fff;
+  font-family: "NotoSansKRR";
+  font-weight: 400;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-top: 2px;
+}
+
+.applicant_input_fields {
+  color: #383838;
+  font-family: "NotoSansKRR";
+  font-weight: 400;
+  font-size: 0.938rem;
+  outline: none;
+  width: 100%;
+  border: none;
+  margin-top: 9px;
+}
+
+.number_input_button_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.number_input_button_container input {
+  color: #383838;
+  font-family: "NotoSansKRR";
+  font-weight: 400;
+  font-size: 0.938rem;
+  outline: none;
+  width: 100%;
+  border: none;
+  margin-top: 9px;
+}
+
+.number_input_button_container button {
+  height: 35px;
+  width: 147px;
+  background-color: #909090;
+  color: #fff;
+  font-family: "NotoSansKRR";
+  font-weight: 400;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-top: 2px;
+}
+
+.applicant_info_container span {
+  color: #dd695d;
+  font-family: "NotoSansKRR";
+  font-weight: 200;
+  font-size: 0.813rem;
+  margin-top: 2px;
+}
+
+.warrant_input_button_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.warrant_input_button_container input {
+  color: #383838;
+  font-family: "NotoSansKRR";
+  font-weight: 400;
+  font-size: 0.938rem;
+  outline: none;
+  width: 100%;
+  border: none;
+  margin-top: 9px;
+}
+
+.warrant_input_button_container button {
+  height: 35px;
+  width: 99px;
+  background-color: #909090;
+  color: #fff;
+  font-family: "NotoSansKRR";
+  font-weight: 400;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-top: 2px;
+}
+
+.buisness_registration_input_button_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buisness_registration_input_button_container input {
+  color: #383838;
+  font-family: "NotoSansKRR";
+  font-weight: 400;
+  font-size: 0.938rem;
+  outline: none;
+  width: 100%;
+  border: none;
+  margin-top: 9px;
+}
+
+.buisness_registration_input_button_container button {
+  height: 35px;
+  width: 99px;
+  background-color: #909090;
+  color: #fff;
+  font-family: "NotoSansKRR";
+  font-weight: 400;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-top: 2px;
+}
+
+.application_form_bottom_buttons_container {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+}
+
+.application_form_bottom_buttons_container > .prev_button {
+  background-color: #bababa;
+  width: 127px;
+  height: 48px;
+  margin-right: 14px;
+  font-size: 1rem;
+  font-family: "NotoSansKRR";
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.application_form_bottom_buttons_container > .next_button {
+  background-color: #dd695d;
+  width: 127px;
+  height: 48px;
+  margin-right: 14px;
+  font-size: 1rem;
+  font-family: "NotoSansKRR";
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #bababa;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #bababa;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #bababa;
+}
+
+@media screen and (max-width: 767px) {
+  .application_form__box {
+    padding: 48px 12px 48px 24px;
+  }
+
+  .buisness_info_container > div {
+    font-size: 1rem;
+  }
+
+  .buisness_info_container input {
+    font-size: 0.9rem;
+  }
+
+  .input_button_container button {
+    height: 28px;
+    width: 80px;
+    font-size: 0.8rem;
+  }
+
+  .buisness_info_container span {
+    font-size: 0.7rem;
+  }
+
+  .applicant_info_container > div {
+    font-size: 1rem;
+  }
+
+  .department_input_button_container input {
+    font-size: 0.9rem;
+  }
+
+  .applicant_input_fields {
+    font-size: 0.9rem;
+  }
+
+  .number_input_button_container input {
+    font-size: 0.9rem;
+  }
+
+  .number_input_button_container button {
+    height: 28px;
+    width: 130px;
+    font-size: 0.8rem;
+  }
+
+  .applicant_info_container span {
+    font-size: 0.7rem;
+  }
+
+  .warrant_input_button_container input {
+    font-size: 0.9rem;
+  }
+
+  .warrant_input_button_container button {
+    height: 28px;
+    width: 80px;
+    font-size: 0.8rem;
+  }
+
+  .buisness_registration_input_button_container input {
+    font-size: 0.9rem;
+  }
+
+  .buisness_registration_input_button_container button {
+    height: 28px;
+    width: 80px;
+    font-size: 0.8rem;
+  }
+}
+
+/* ----------------------------------submit_application_tab content---------------------------------------- */
+.submit_application_content {
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 50px 0;
+}
+
+.submit_application_box {
+  background-color: #fff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 615px;
+}
+
+.submit_application_box > img {
+  height: 150px;
+}
+
+.submit_application_box div {
+  font-size: 1.56rem;
+  font-family: "NotoSansKRR";
+  font-weight: 600;
+  margin-top: 24px;
+}
+
+.submit_application_box p {
+  font-size: 1.25rem;
+  font-family: "NotoSansKRR";
+  font-weight: 400;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.submit_application_box button {
+  background: #dd695d;
+  height: 48px;
+  width: 141px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  font-size: 1.06rem;
+  font-family: "NotoSansKRR";
+  font-weight: 500;
+  color: #fff;
+  border-color: transparent;
+  opacity: 0.9;
+  margin-top: 60px;
+}
+
+.submit_application_box button:hover {
+  opacity: 1;
+}
+
+@media screen and (max-width: 455px) {
+  .submit_application_box p {
+    font-size: 0.8rem;
+    font-family: "NotoSansKRR";
+    font-weight: 400;
+    margin-top: 40px;
+    text-align: center;
+  }
+}
+
+/* ----------------------------------coorporate_info_content content---------------------------------------- */
+.coorporate_info_content {
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 50px 0;
+  position: relative;
+}
+
+.coorporate_info_content_box {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 44px 80px;
+}
+
+.buisness_info_title_container {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.buisness_info_title_container > div {
+  font-size: 1.38rem;
+  font-family: "NotoSansKRR";
+  font-weight: 200;
+  color: #dd695d;
+}
+
+.buisness_info_button_container {
+  position: absolute;
+  right: 0;
+}
+
+.buisness_info_button_container a {
+  margin-left: 10px;
+  padding: 4px 18px;
+  background-color: #909090;
+  border-radius: 50px;
+  border: none;
+  color: #fff;
+  font-size: 1.06rem;
+  font-family: "NotoSansKRR";
+  font-weight: 400;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.buisness_info_button_container a:hover {
+  color: #fff;
+}
+
+.coorporate_info_content_row {
+  display: flex;
+  margin-top: 18px;
+}
+
+.coorporate_info_content_row > span {
+  color: #909090;
+  font-size: 1rem;
+  font-weight: 200;
+  font-family: "NotoSansKRR";
+  width: 20%;
+}
+
+.coorporate_info_content_row > div {
+  color: #383838;
+  font-size: 1.06rem;
+  font-weight: 200;
+  font-family: "NotoSansKRR";
+}
+
+.personal_info_title_container {
+  display: flex;
+  width: 100%;
+  margin-top: 60px;
+  justify-content: space-between;
+}
+
+.personal_info_title_container > div {
+  font-size: 1.38rem;
+  font-family: "NotoSansKRR";
+  font-weight: 200;
+  color: #dd695d;
+}
+
+.personal_info_title_container a {
+  margin-left: 10px;
+  padding: 4px 18px;
+  background-color: #909090;
+  border-radius: 50px;
+  border: none;
+  color: #fff;
+  font-size: 1.06rem;
+  font-family: "NotoSansKRR";
+  font-weight: 400;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.personal_info_title_container a:hover {
+  color: #fff;
+}
+
+.coorporate_info_content_row p {
+  font-size: 0.938rem;
+  font-family: "NotoSansKRR";
+  font-weight: 200;
+  color: #dd695d;
+  margin-top: 2px;
+  margin-left: 118px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 991px) {
+  .coorporate_info_content_row > span {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .coorporate_info_content_box {
+    padding: 24px;
+  }
+
+  .buisness_info_title_container > div {
+    font-size: 1rem;
+  }
+
+  .buisness_info_button_container a {
+    margin-left: 5px;
+    padding: 4px 12px;
+    font-size: 0.8rem;
+  }
+
+  .coorporate_info_content_row > span {
+    font-size: 0.6rem;
+    width: 80px;
+  }
+
+  .coorporate_info_content_row > div {
+    font-size: 0.65rem;
+  }
+
+  .personal_info_title_container {
+    margin-top: 40px;
+  }
+
+  .personal_info_title_container > div {
+    font-size: 1rem;
+  }
+
+  .personal_info_title_container a {
+    margin-left: 5px;
+    padding: 4px 12px;
+    font-size: 0.8rem;
+  }
+
+  .coorporate_info_content_row p {
+    font-size: 0.65rem;
+    margin-left: 20px;
+    margin-top: 0px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .buisness_info_title_container > div {
+    font-size: 0.9rem;
+  }
+
+  .buisness_info_button_container a {
+    font-size: 0.6rem;
+  }
+
+  .personal_info_title_container > div {
+    font-size: 0.9rem;
+  }
+
+  .personal_info_title_container a {
+    font-size: 0.6rem;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+/* ------------------------------------------------Modal--------------------------- */
+.modal-window {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.35);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+.modal_box_container {
+  padding: 20px 30px 30px 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 575px;
+}
+
+.modal_title_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal_title_container > div {
+  font-size: 1.38rem;
+  font-family: "NotoSansKRR";
+  font-weight: 400;
+  color: #dd695d;
+}
+
+.modal_title_container > img {
+  width: 23px;
+  height: 23px;
+  cursor: pointer;
+}
+
+.modal_content_container {
+  margin-top: 44px;
+}
+
+.modal_content_container div {
+  font-size: 0.813rem;
+  font-weight: 200;
+  font-family: "NotoSansKRR";
+  color: #909090;
+  margin-top: 24px;
+}
+
+.modal_content_container input {
+  font-size: 0.938rem;
+  font-weight: 200;
+  font-family: "NotoSansKRR";
+  outline: none;
+  width: 100%;
+  border: none;
+  margin-top: 2px;
+}
+
+.modal_content_container span {
+  margin-top: 9px;
+  font-size: 0.938rem;
+  font-weight: 400;
+  font-family: "NotoSansKRR";
+  color: #383838;
+  margin-top: 24px;
+}
+
+.modal_button_container {
+  margin-top: 44px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.modal_button_container a {
+  padding: 12px 48px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #dd695d;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "NotoSansKRR";
+}
+
+.modal_content_container a:hover {
+  color: #fff;
+}
+
+.modal-window:target {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-close {
+  color: #aaa;
+  line-height: 50px;
+  font-size: 80%;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 70px;
+  text-decoration: none;
+}
+
+.modal_table_container {
+  padding: 20px 30px 30px 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+}
+
+.modal_table_line_dark {
+  height: 2px;
+  width: 100%;
+  background-color: #909090;
+  margin-top: 22px;
+}
+
+.table > thead > tr > th {
+  padding: 18px 0;
+  text-align: center;
+  font-size: 1rem;
+  color: #909090;
+  font-family: "NotoSansKRR";
+  font-weight: 200;
+  white-space: nowrap;
+}
+
+.table > tbody > tr > td {
+  padding: 18px;
+  text-align: center;
+  font-size: 1.063rem;
+  color: #383838;
+  font-family: "NotoSansKRR";
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 575px) {
+  .modal_box_container {
+    padding: 20px;
+    width: 90%;
+  }
+
+  .modal_title_container > img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .modal_table_container {
+    padding: 15px 10px 10px 10px;
+    top: 55%;
+    width: 90%;
+  }
+
+  .modal_title_container > div {
+    font-size: 1.2rem;
+  }
+}
+
+/* number input hide arrow */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Custom Radio button */
+.radio_hidden {
+  position: absolute;
+  left: -9999px;
+}
+
+input[type="radio"]:checked + label > .radio_button_active {
+  display: inline-block;
+}
+
+input[type="radio"]:checked + label > .radio_button_inactive {
+  display: none;
+}
+
+/* Stuff after this is only to make things more pretty */
+input[type="radio"] + label > .radio_button_active {
+  display: none;
+}
+
+input[type="radio"] + label > .radio_button_inactive {
+  display: inline-block;
+}
+
+/* Custom checkbox */
+.term_agreement_container > input {
+  height: 25px;
+  width: 25px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  border: 1px solid #bababa;
+  border-radius: 4px;
+  outline: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.term_agreement_container > input:checked {
+  background-color: #dd695d;
+}
+
+.term_agreement_container > input:checked::before {
+  content: "\2713";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}

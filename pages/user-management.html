@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Management</title>
+
+    <link rel="stylesheet" href="../styles/user-management.css" />
+
+    <link
+      rel="shortcut icon"
+      href="../assets/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <!-- Bootstrap -->
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Datatable -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+  </head>
+  <body>
+    <!----------------------------------Navbar---------------------------------------->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
+      <div class="container-fluid navbar_container">
+        <img
+          src="../assets/header_image.svg"
+          alt="header_image"
+          class="header_image"
+        />
+
+        <a class="navbar-brand" href="/" style="font-size: 1.375rem">
+          우체국통합포털
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                서비스 소개
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../pages/service-introduction.html"
+                    >소개</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../pages/information-use-introduction.html"
+                    >이용안내</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown active">
+              <a
+                class="nav-link"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                법인 서비스
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="/">소개</a></li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../pages/service-application.html"
+                    >법인정보</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item active_sub_item"
+                    href="../pages/user-management.html"
+                    >사용자관리</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../pages/group-management.html"
+                    >그룹관리</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../pages/authentication-management.html"
+                    >인증정보</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                KP-DID API
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../pages/kpdid-api-introduction.html"
+                    >소개</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../pages/kpdid-api-documents.html"
+                    >API 목록
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                고객센터
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../pages/service-center-notice.html"
+                    >공지사항</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../pages/service-center-faq.html"
+                    >FAQ</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <img src="../assets/logout_image.svg" alt="logout_image" />
+            <div>로그인</div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- section_title_container -->
+    <section class="section_title_container">
+      <div class="navigation_banner">
+        <img
+          src="../assets/navbanner_home_icon.svg"
+          alt="navbanner_home_icon"
+          style="margin-bottom: 2px"
+        />
+
+        <div>
+          메인
+          <img
+            src="../assets/navbanner_arrow_icon.svg"
+            style="margin-bottom: 3px"
+            alt="navbanner_arrow_icon"
+          />
+        </div>
+        <div>
+          법인서비스
+          <img
+            src="../assets/navbanner_arrow_icon.svg"
+            style="margin-bottom: 3px"
+            alt="navbanner_arrow_icon"
+          />
+        </div>
+        <div style="opacity: 1">사용자관리</div>
+      </div>
+
+      <div class="container">
+        <div class="section_title">사용자 관리</div>
+        <div class="section_subtitle">
+          법인 DID, 인증서 발급 및 사용이 필요한 사용자를 추가/삭제 하실 수
+          있습니다.
+        </div>
+      </div>
+    </section>
+
+    <!-- User management table section  -->
+    <section class="user_management_container">
+      <div class="container">
+        <div class="table_section_title_container">
+          <p>사용자 등록현황</p>
+
+          <div class="table_section_title_button_container">
+            <a href="#add_user_modal">추가</a>
+            <a href="#">삭제</a>
+          </div>
+        </div>
+
+        <div class="dark_line"></div>
+
+        <div class="table-responsive">
+          <table class="table" id="table_id" style="width: 100%">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">구분</th>
+                <th scope="col">부서</th>
+                <th scope="col">사용자명</th>
+                <th scope="col">휴대폰번호</th>
+                <th scope="col">이메일</th>
+                <th scope="col">발급여부</th>
+                <th scope="col">발급일시</th>
+              </tr>
+            </thead>
+            <tbody id="user_management_table_data">
+              <!-- <tr>
+                <td></td>
+                <td>대표자</td>
+                <td class="table_red_text">부서등록</td>
+                <td class="table_red_text">홍길동</td>
+                <td class="table_number">010-1234-5678</td>
+                <td>email@post.co.kr</td>
+                <td>발급</td>
+                <td>2021. 08. 07 12:00:00</td>
+              </tr>
+
+              <tr>
+                <td style="position: relative"><input type="checkbox" /></td>
+                <td>사용자</td>
+                <td class="table_red_text">경영지원 개발2팀</td>
+                <td class="table_red_text">홍길남</td>
+                <td class="table_number">010-1234-5678</td>
+                <td>email@post.co.kr</td>
+                <td>발급</td>
+                <td>2021. 08. 07 12:00:00</td>
+              </tr>
+
+              <tr>
+                <td style="position: relative"><input type="checkbox" /></td>
+                <td>사용자</td>
+                <td class="table_red_text">경영지원</td>
+                <td class="table_red_text">홍길서</td>
+                <td class="table_number">010-1234-5678</td>
+                <td>email@post.co.kr</td>
+                <td>미발급</td>
+                <td>2021. 08. 07 12:00:00</td>
+              </tr> -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Add user modal -->
+      <div id="add_user_modal" class="modal-window">
+        <div class="modal_box_container">
+          <div class="modal_title_container">
+            <div>사용자 추가</div>
+            <a href="#">
+              <img src="../assets/cross_icon.svg" alt="cross_icon" />
+            </a>
+          </div>
+
+          <div class="modal_content_container">
+            <div>이름</div>
+            <input type="text" placeholder="이름 입력" />
+            <p class="light_line"></p>
+
+            <div>휴대폰번호</div>
+            <input type="number" placeholder="휴대폰번호(번호만 입력)" />
+            <p class="light_line"></p>
+
+            <div>이메일</div>
+            <input type="text" placeholder="이메일 입력" />
+            <p class="light_line"></p>
+
+            <div>업무권한</div>
+            <select name="permissions_dropdown" id="permissions_dropdown">
+              <option value="representative">대표자</option>
+              <option value="user">사용자</option>
+            </select>
+
+            <p class="light_line_dropdown"></p>
+
+            <div class="modal_button_container">
+              <a href="#">저장</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script
+      type="text/javascript"
+      src="../javascript/user-management.js"
+    ></script>
+  </body>
+</html>

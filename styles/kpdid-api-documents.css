@@ -1,0 +1,546 @@
+/* --------------------------------fonts-------------------------------------- */
+@font-face {
+  font-family: "NotoSansKRB";
+  src: url("../assets/fonts/NotoSansKR-Bold.otf");
+}
+@font-face {
+  font-family: "NotoSansKRM";
+  src: url("../assets/fonts/NotoSansKR-Medium.otf");
+}
+@font-face {
+  font-family: "NotoSansKRR";
+  src: url("../assets/fonts/NotoSansKR-Regular.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* --------------------------------navbar-------------------------------------- */
+.navbar {
+  padding: 12px;
+}
+
+.navbar_container {
+  padding: 6px 0;
+}
+
+.header_image {
+  height: 28px;
+  width: 56px;
+}
+
+.navbar-brand {
+  font-weight: 500;
+  margin-left: 5px;
+  font-family: "NotoSansKRM";
+}
+
+@media screen and (min-width: 991px) {
+  .navbar-nav {
+    margin-left: 20px;
+  }
+  .navbar-nav > li {
+    margin-left: 40px;
+    font-size: 1.25rem;
+    font-family: "NotoSansKRR";
+  }
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+.navbar-nav > li {
+  font-size: 1.25rem;
+  font-family: "NotoSansKRR";
+}
+
+.dropdown-menu > li > a:active {
+  color: #dd695d;
+  background-color: transparent;
+  text-decoration: underline;
+  opacity: 1;
+}
+
+.dropdown-menu > li > a {
+  font-family: "NotoSansKRR";
+  opacity: 0.5;
+  font-size: 1.25rem;
+}
+
+.navbar-nav .active_sub_item {
+  font-family: "NotoSansKRM";
+  opacity: 0.8;
+}
+
+.navbar-nav .active {
+  font-weight: bold;
+  font-family: "NotoSansKRM";
+}
+
+.navbar-nav > li:hover {
+  font-family: "NotoSansKRR";
+  font-size: 1.25rem;
+}
+
+.dropdown-item {
+  font-family: "NotoSansKRR";
+  font-size: 1rem;
+  font-weight: 200;
+  opacity: 0.8;
+}
+
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+
+.d-flex img {
+  height: 21px;
+  width: 23px;
+}
+
+.d-flex div {
+  margin-left: 10px;
+  font-family: "NotoSansKRM";
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+.d-flex:hover {
+  cursor: pointer;
+}
+/* ----------------------------------section_title_container---------------------------------------- */
+
+.section_title_container {
+  /* background: url("../assets/kpdid_api_section.svg") no-repeat; */
+  background: url("../assets/kpdid_api_section.png") no-repeat;
+  width: 100%;
+  background-size: cover;
+  padding: 0 0 79px 0;
+}
+
+.navigation_banner {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 120px;
+  display: flex;
+  align-items: flex-end;
+  padding: 12px 25px;
+}
+
+.navigation_banner div {
+  margin-left: 9px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 200;
+  opacity: 0.5;
+  font-family: "NotoSansKRR";
+}
+
+.section_title {
+  margin-top: 104px;
+  font-size: 1.75rem;
+  font-family: "NotoSansKRM";
+  font-weight: 500;
+  color: #fff;
+}
+
+@media screen and (max-width: 575px) {
+  .navbar {
+    padding: 0;
+  }
+
+  .navigation_banner {
+    padding: 12px;
+  }
+}
+
+/* ---------------------------------------------- section content ------------------------------------ */
+.api_documents_content_container {
+  background-color: #f5f5f5;
+  padding: 50px 0;
+}
+
+.api_documents_box {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 50px;
+}
+
+.document_box_title_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 12px 0;
+  border-bottom: 2px solid #909090;
+  align-items: center;
+}
+
+.document_box_title_container .document_box_title {
+  font-size: 1.5rem;
+  font-family: "NotoSansKRM";
+  font-weight: 400;
+  color: #383838;
+}
+
+.document_box_title_container .document_box_title_button_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 43px;
+  width: 233px;
+  background-color: #dd695d;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.document_box_title_button_container span {
+  font-size: 1.125rem;
+  font-family: "NotoSansKRR";
+  font-weight: 200;
+  color: #ffffff;
+}
+
+.document_box_title_button_container div {
+  font-size: 1.125rem;
+  font-family: "NotoSansKRR";
+  font-weight: 200;
+  color: #ffffff;
+  margin-left: 10px;
+}
+
+.document_box_title_button_container img {
+  height: 16px;
+  width: 13px;
+  margin-left: 4px;
+}
+
+.api_single_document_container {
+  padding: 29px 32px 24px 32px;
+  border: 1px solid #d2d2d2;
+}
+
+.api_single_document_container p {
+  margin: 0;
+  font-size: 1.25rem;
+  font-family: "NotoSansKRR";
+  font-weight: 500;
+  color: #383838;
+}
+
+.api_single_document_button_row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.api_single_document_button_row span {
+  margin: 0;
+  font-size: 1.125rem;
+  font-family: "NotoSansKRR";
+  font-weight: 500;
+  color: #909090;
+}
+
+.api_single_document_download_container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.api_single_document_download_container div {
+  font-size: 1.125rem;
+  font-family: "NotoSansKRR";
+  font-weight: 200;
+  color: #dd695d;
+}
+
+.api_single_document_download_container img {
+  height: 16px;
+  width: 16px;
+  margin-left: 7px;
+}
+
+@media screen and (max-width: 767px) {
+  .api_documents_box {
+    padding: 25px;
+  }
+
+  .document_box_title_container .document_box_title {
+    font-size: 0.8rem;
+  }
+
+  .document_box_title_container .document_box_title_button_container {
+    height: 30px;
+    width: 150px;
+  }
+
+  .document_box_title_button_container span {
+    font-size: 0.7rem;
+  }
+
+  .document_box_title_button_container div {
+    font-size: 0.7rem;
+    margin-left: 2px;
+  }
+
+  .document_box_title_button_container img {
+    height: 12px;
+    width: 10px;
+    margin-left: 2px;
+  }
+
+  .api_single_document_container {
+    padding: 15px;
+  }
+
+  .api_single_document_container p {
+    font-size: 0.8rem;
+  }
+
+  .api_single_document_button_row span {
+    font-size: 0.7rem;
+  }
+
+  .api_single_document_download_container div {
+    font-size: 0.7rem;
+    font-family: "NotoSansKRR";
+    font-weight: 200;
+    color: #dd695d;
+  }
+
+  .api_single_document_download_container img {
+    height: 10px;
+    width: 10px;
+    margin-left: 5px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .document_box_title_container .document_box_title {
+    font-size: 0.7rem;
+  }
+
+  .document_box_title_container .document_box_title_button_container {
+    height: 28px;
+    width: 130px;
+  }
+
+  .document_box_title_button_container span {
+    font-size: 0.6rem;
+  }
+
+  .document_box_title_button_container div {
+    font-size: 0.6rem;
+  }
+}
+
+/* API details */
+.api_details_box_container {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 50px;
+}
+
+.api_detail_title {
+  font-size: 1.5rem;
+  font-family: "NotoSansKRR";
+  font-weight: 400;
+  color: #383838;
+  width: 100%;
+  padding: 0 0 20px 0;
+  border-bottom: 2px solid #909090;
+}
+
+.api_detail_info_container {
+  padding: 0 0 0 33px;
+  margin-top: 33px;
+}
+
+.api_detail_info_title {
+  font-size: 1.25rem;
+  font-family: "NotoSansKRR";
+  font-weight: 400;
+  color: #383838;
+}
+
+.api_detail_info_sub_title {
+  font-size: 1.125rem;
+  font-family: "NotoSansKRR";
+  font-weight: 400;
+  color: #909090;
+}
+
+.column_info_container {
+  display: flex;
+}
+
+.title_column_container div {
+  font-size: 0.938rem;
+  font-family: "NotoSansKRR";
+  font-weight: 400;
+  color: #383838;
+  margin-top: 28px;
+  width: 94px;
+}
+
+.seperator_line {
+  height: calc(100% - 28px);
+  width: 1px;
+  background-color: #d2d2d2;
+  margin-top: 28px;
+}
+
+.seperator_line_small {
+  height: calc(100% - 75px);
+  width: 1px;
+  background-color: #d2d2d2;
+  margin-top: 28px;
+}
+
+.title_info_column_container div {
+  font-size: 0.938rem;
+  font-family: "NotoSansKRR";
+  font-weight: 400;
+  color: #909090;
+  margin-top: 28px;
+  margin-left: 30px;
+}
+
+.title_info_column_container span {
+  font-size: 0.938rem;
+  font-family: "NotoSansKRR";
+  font-weight: 400;
+  color: #dd695d;
+  margin-left: 15px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.list_button_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 48px;
+}
+
+.list_button_container div {
+  color: #fff;
+  font-size: 1.125rem;
+  padding: 10px 47px;
+  background-color: #dd695d;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .api_detail_info_container {
+    padding: 0;
+  }
+
+  .seperator_line_small {
+    height: calc(100% - 28px);
+  }
+
+  .api_details_box_container {
+    padding: 24px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .title_column_container div {
+    font-size: 0.7rem;
+  }
+
+  .title_info_column_container div {
+    font-size: 0.7rem;
+  }
+}
+
+/* --------------------------------footer-------------------------------------- */
+.footer {
+  display: flex;
+  padding: 25px 20px 25px 50px;
+  width: 100%;
+  background-color: #d2d2d2;
+}
+
+.footer_image_container {
+  display: flex;
+  width: 15%;
+}
+
+.footer_image_container img {
+  height: 20px;
+  width: 133px;
+  margin-right: 10px;
+  margin-top: 2px;
+}
+
+.footer_image_container div {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.footer_info_container {
+  width: 65%;
+}
+
+.footer_info_container p {
+  font-size: 0.8rem;
+  font-weight: 400;
+  font-family: "NotoSansKRR";
+}
+
+.footer_buttons_container {
+  display: flex;
+  width: 20%;
+  align-items: flex-end;
+  padding-bottom: 15px;
+  justify-content: flex-end;
+}
+
+.footer_buttons_container div {
+  margin-right: 20px;
+  text-decoration: underline;
+  font-size: 0.8rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: "NotoSansKRR";
+  opacity: 0.8;
+}
+
+.footer_buttons_container div:hover {
+  opacity: 1;
+}
+
+@media screen and (max-width: 991px) {
+  .footer {
+    padding: 20px;
+    display: block;
+  }
+  .footer_image_container {
+    width: 100%;
+  }
+  .footer_info_container {
+    width: 100%;
+    margin-top: 15px;
+  }
+  .footer_buttons_container {
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+
+.hidden {
+  display: none;
+}

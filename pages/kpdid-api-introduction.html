@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KP-DID API Introduction</title>
+
+    <link rel="stylesheet" href="../styles/kpdid-api-introduction.css" />
+
+    <link
+      rel="shortcut icon"
+      href="../assets/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <!-- Bootstrap -->
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!----------------------------------Navbar---------------------------------------->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
+      <div class="container-fluid navbar_container">
+        <img
+          src="../assets/header_image.svg"
+          alt="header_image"
+          class="header_image"
+        />
+
+        <a class="navbar-brand" href="/" style="font-size: 1.375rem">
+          우체국통합포털
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                서비스 소개
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../pages/service-introduction.html"
+                    >소개</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../pages/information-use-introduction.html"
+                    >이용안내</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                법인 서비스
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="/">소개</a></li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../pages/service-application.html"
+                    >법인정보</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../pages/user-management.html"
+                    >사용자관리</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../pages/group-management.html"
+                    >그룹관리</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../pages/authentication-management.html"
+                    >인증정보</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown active">
+              <a
+                class="nav-link"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                KP-DID API
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a
+                    class="dropdown-item active_sub_item"
+                    href="../pages/kpdid-api-introduction.html"
+                    >소개</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../pages/kpdid-api-documents.html"
+                    >API 목록
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                고객센터
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../pages/service-center-notice.html"
+                    >공지사항</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../pages/service-center-faq.html"
+                    >FAQ</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <img src="../assets/logout_image.svg" alt="logout_image" />
+            <div>로그인</div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- section_title_container -->
+    <section class="section_title_container">
+      <div class="navigation_banner">
+        <img
+          src="../assets/navbanner_home_icon.svg"
+          alt="navbanner_home_icon"
+          style="margin-bottom: 2px"
+        />
+
+        <div>
+          메인
+          <img
+            src="../assets/navbanner_arrow_icon.svg"
+            style="margin-bottom: 3px"
+            alt="navbanner_arrow_icon"
+          />
+        </div>
+        <div>
+          KP-DID API
+          <img
+            src="../assets/navbanner_arrow_icon.svg"
+            style="margin-bottom: 3px"
+            alt="navbanner_arrow_icon"
+          />
+        </div>
+        <div style="opacity: 1">소개</div>
+      </div>
+
+      <div class="container">
+        <div class="section_title">KP-DID API 소개</div>
+      </div>
+    </section>
+
+    <!-------------------------------- Section Content ------------------------------------------------------>
+    <section class="api_introduction_section_container">
+      <div class="container api_introduction_content_box">
+        <div class="api_introduction_section_title">KP-DID API 소개</div>
+
+        <div class="title_border"></div>
+
+        <p>
+          Korea - Post Application Programming Interface의 약어로서 <br />
+          누구나 사용할 수 있도록 공개된 API를 말합니다.
+        </p>
+
+        <div class="api_working_model_container">
+          <div class="api_working_model_user_container">
+            <img src="../assets/kpdid_user_icon.svg" alt="user_icon" />
+            <div>사용자</div>
+          </div>
+
+          <div class="api_working_model_flow_container">
+            <div class="api_working_model_flow_key_container">
+              <div class="api_working_model_flow_key_title">KEY</div>
+              <div class="key_image_container">
+                <img src="../assets/kpdid_key_icon.svg" alt="key_icon" />
+              </div>
+              <img
+                class="api_working_model_flow_key_container_arrow"
+                src="../assets/dotted_line.svg"
+                alt="dotted_line"
+              />
+              <div class="dotted_line_triangle"></div>
+            </div>
+
+            <div class="api_working_model_flow_data_container">
+              <div class="data_image_container">
+                <img src="../assets/kpdid_file_icon.svg" alt="file_icon" />
+              </div>
+              <img
+                class="api_working_model_flow_data_container_arrow"
+                src="../assets/dotted_line.svg"
+                alt="dotted_line_data"
+              />
+              <div class="dotted_line_data_triangle"></div>
+              <div class="api_working_model_flow_data_title">DATA</div>
+            </div>
+          </div>
+
+          <div class="api_working_model_user_container">
+            <img
+              src="../assets/kpdid_postal_service_logo.svg"
+              alt="kpdid_postal_service_logo"
+            />
+            <div>우정사업정보센터</div>
+          </div>
+        </div>
+
+        <span>
+          우정사업정보센터에서 제공되는 콘텐츠 및 데이터를 누구나 쉽게 활용하고
+          웹서비스 및 어플리케이션 개발을 지원하기 위하여 <br />
+          API를 외부에 공개 한 것을 의미합니다. 즉, 인터넷 이용자가 일방적으로
+          웹 검색 결과 및 사용자인터페이스(UI) 등을 제공 받는데 <br />
+          그치지 않고 직접 응용 프로그램과 서비스를 개발할 수 있도록 공개된
+          API를 말합니다.
+        </span>
+
+        <div class="api_user_guide_title">
+          저희 우정사업정보센터에서 제공하는 <br />
+          KP-DID는 다음과 같이 사용 가능합니다.
+        </div>
+
+        <div class="row api_user_guide_item_container_width">
+          <div class="col-lg-6 api_user_guide_item_md_container">
+            <div class="api_user_guide_item_container">
+              <div class="api_user_guide_image_container">
+                <img
+                  src="../assets/kpdid_member_management_icon.svg"
+                  alt="member_management_icon"
+                />
+              </div>
+
+              <div style="margin-left: 24px">
+                <div class="api_user_guide_item_info_title">회원관리</div>
+
+                <div class="api_user_guide_item_info_container">
+                  <div class="vertical_seperator_line"></div>
+                  <div>
+                    <div class="api_user_guide_item_sub_info">
+                      우체국 API를 이용하려는 기업의 회원 가입, <br />
+                      테스트 환경을 제공합니다.
+                    </div>
+
+                    <div class="api_user_guide_item_sub_info">
+                      API 이용 계약 신청·해지 등의 기능을 제공합니다.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 api_user_guide_item_md_container">
+            <div class="api_user_guide_item_container">
+              <div class="api_user_guide_image_container">
+                <img
+                  src="../assets/kpdid_api_info_icon.svg"
+                  alt="api_info_icon"
+                />
+              </div>
+
+              <div style="margin-left: 24px">
+                <div class="api_user_guide_item_info_title">API 정보제공</div>
+
+                <div class="api_user_guide_item_info_container">
+                  <div class="vertical_seperator_line"></div>
+                  <div>
+                    <div class="api_user_guide_item_sub_info">
+                      우체국 금융 API를 쉽게 <br />
+                      검색 · 이용할 수 있도록 목록과 관련 정보 등을 <br />
+                      스토어 · 포털 등의 형태로 제공합니다.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row api_user_guide_item_container_width">
+          <div class="col-lg-6 api_user_guide_item_md_container">
+            <div class="api_user_guide_item_container">
+              <div class="api_user_guide_image_container">
+                <img
+                  src="../assets/kpdid_development_test_support_icon.svg"
+                  alt="development_test_support_icon"
+                />
+              </div>
+
+              <div style="margin-left: 24px">
+                <div class="api_user_guide_item_info_title">
+                  개발 · 테스트 지원
+                </div>
+
+                <div class="api_user_guide_item_info_container">
+                  <div class="vertical_seperator_line_big"></div>
+                  <div>
+                    <div class="api_user_guide_item_sub_info">
+                      회원사의 우체국금융 API 이용 개발가이드, <br />
+                      계약 정책가이드를 제공합니다
+                    </div>
+
+                    <div class="api_user_guide_item_sub_info">
+                      우체국금융 API를 이용하기 위한 <br />
+                      테스트 환경 제공 및 지원합니다.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 api_user_guide_item_md_container">
+            <div class="api_user_guide_item_container">
+              <div class="api_user_guide_image_container">
+                <img
+                  src="../assets/kpdid_customer_support_icon.svg"
+                  alt="customer_support_icon"
+                />
+              </div>
+
+              <div style="margin-left: 24px">
+                <div class="api_user_guide_item_info_title">고객지원</div>
+
+                <div class="api_user_guide_item_info_container">
+                  <div class="vertical_seperator_line_big"></div>
+                  <div>
+                    <div class="api_user_guide_item_sub_info">
+                      회원사의 우체국금융 API 이용 개발가이드, <br />
+                      계약 정책가이드를 제공합니다.
+                    </div>
+
+                    <div class="api_user_guide_item_sub_info">
+                      -우체국금융 API를 이용하기 위한 <br />
+                      테스트 환경 제공 및 지원합니다.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!----------------------------------Footer---------------------------------------->
+    <footer class="footer">
+      <!-- <div class="footer_image_container">
+        <img src="../assets/footer_logo.png" alt="logo" />
+        <div>우정사업본부</div>
+      </div> -->
+
+      <div class="footer_image_container">
+        <img src="../assets/footer_logo.svg" alt="logo" />
+      </div>
+
+      <div class="footer_info_container">
+        <p>
+          (30114) 세종특별자치시 도움5로 19 (어진동)사업자등록번호
+          101-83-02925E-mail webpost@koreapost.go.kr
+          <br />
+          고객센터(우편 1588-1300, 예금 1599-1900, 보험 1599-0100), FAX :
+          0505-005-1024, 당직실 : 044-200-8841 (평일 야간, 공휴일)
+          <br />
+          Copyright⒞2016 KOREA POST(Office of postal service). All rights
+          reserved.
+        </p>
+      </div>
+
+      <div class="footer_buttons_container">
+        <div>이용약관</div>
+        <div>개인정보처리방침</div>
+      </div>
+    </footer>
+  </body>
+</html>

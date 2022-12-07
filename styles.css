@@ -1,0 +1,779 @@
+/* --------------------------------fonts-------------------------------------- */
+@font-face {
+  font-family: "NotoSansKRB";
+  src: url("./assets/fonts/NotoSansKR-Bold.otf");
+}
+@font-face {
+  font-family: "NotoSansKRM";
+  src: url("./assets/fonts/NotoSansKR-Medium.otf");
+}
+@font-face {
+  font-family: "NotoSansKRR";
+  src: url("./assets/fonts/NotoSansKR-Regular.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* --------------------------------navbar-------------------------------------- */
+.navbar {
+  padding: 12px;
+}
+
+.navbar_container {
+  padding: 6px 0;
+}
+
+.header_image {
+  height: 28px;
+  width: 56px;
+}
+
+.navbar-brand {
+  font-weight: 500;
+  margin-left: 5px;
+  font-family: "NotoSansKRM";
+}
+
+@media screen and (min-width: 991px) {
+  .navbar-nav {
+    margin-left: 20px;
+  }
+  .navbar-nav > li {
+    margin-left: 40px;
+    font-size: 1.25rem;
+    font-family: "NotoSansKRR";
+  }
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+.navbar-nav > li {
+  font-size: 1.25rem;
+  font-family: "NotoSansKRR";
+}
+
+.dropdown-menu > li > a:active {
+  color: #dd695d;
+  background-color: transparent;
+  text-decoration: underline;
+  opacity: 1;
+}
+
+.dropdown-menu > li > a {
+  font-family: "NotoSansKRR";
+  opacity: 0.5;
+  font-size: 1.25rem;
+}
+
+.navbar-nav .active_sub_item {
+  font-family: "NotoSansKRM";
+  opacity: 0.8;
+}
+
+.navbar-nav .active {
+  font-weight: bold;
+  font-family: "NotoSansKRM";
+}
+
+.navbar-nav > li:hover {
+  font-family: "NotoSansKRR";
+  font-size: 1.25rem;
+}
+
+.dropdown-item {
+  font-family: "NotoSansKRR";
+  font-size: 1.25rem;
+  font-weight: 200;
+  opacity: 0.8;
+}
+
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+
+.d-flex img {
+  height: 21px;
+  width: 23px;
+}
+
+.d-flex div {
+  margin-left: 10px;
+  font-family: "NotoSansKRM";
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+.d-flex:hover {
+  cursor: pointer;
+}
+/* --------------------------------homepage-------------------------------------- */
+.home_page_container {
+  background: url("./assets/homepage_background.png") no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.homepage_banner_container {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 120px;
+  display: flex;
+  align-items: flex-end;
+  padding: 12px 25px;
+}
+
+.homepage_banner_container div {
+  margin-left: 9px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 200;
+  opacity: 0.5;
+  font-family: "NotoSansKRR";
+}
+
+.row {
+  height: 440px;
+}
+
+@media screen and (max-width: 575px) {
+  .navbar {
+    padding: 0;
+  }
+
+  .homepage_banner_container {
+    padding: 12px;
+  }
+}
+
+/* --------------------------------homepage_info_container: Text and Image-------------------------------------- */
+.homepage_info_container {
+  margin-top: 50px;
+}
+
+.homepage_title_text {
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: 500;
+  font-family: "NotoSansKRR";
+}
+
+.homepage_sub_text {
+  margin-top: 10px;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 200;
+  font-family: "NotoSansKRR";
+}
+
+.homepage_image_container {
+  display: flex;
+}
+
+.homepage_image_container img {
+  margin-right: 20px;
+}
+
+.homepage_info_container_content button {
+  border-radius: 25px;
+  background-color: #dd695d;
+  outline: none;
+  border-color: transparent;
+  color: #fff;
+  margin-top: 20px;
+  font-size: 1.375rem;
+  width: 215px;
+  height: 52px;
+  font-family: "NotoSansKRM";
+}
+
+@media screen and (max-width: 1200px) {
+  .homepage_image_container img {
+    height: 380px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .homepage_image_container img {
+    height: 340px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .homepage_image_container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .homepage_image_container img {
+    height: 450px;
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .homepage_title_text {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .homepage_sub_text {
+    margin-top: 10px;
+    color: #fff;
+    font-size: 1rem;
+  }
+
+  .homepage_info_container_content button {
+    font-size: 1rem;
+    width: 160px;
+    height: 46px;
+  }
+
+  .homepage_image_container img {
+    height: 350px;
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .homepage_image_container {
+    margin-left: 0px;
+  }
+  .homepage_image_container img {
+    height: 300px;
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .homepage_image_container img {
+    height: 280px;
+    margin-top: 100px;
+  }
+}
+
+/* --------------------------------homepage_cards_container-------------------------------------- */
+.homepage_cards_container {
+  margin-top: 250px;
+  background-color: #dd695d;
+  height: 36vh;
+}
+
+.homepage_cards_container .row {
+  height: 90px;
+}
+
+.homepage_card {
+  height: 200px;
+  width: 260px;
+  background: linear-gradient(#fff, 95%, rgba(151, 144, 144, 0.8));
+  border-radius: 15px 15px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: -100px;
+}
+
+.homepage_card img {
+  height: 60px;
+  width: 90px;
+}
+
+.homepage_card div {
+  color: black;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: "NotoSansKRM";
+}
+
+@media screen and (max-width: 1200px) {
+  .homepage_card {
+    width: 200px;
+    height: 180px;
+    background: linear-gradient(#fff, 95%, rgba(151, 144, 144, 0.8));
+    border-radius: 15px 15px 0 0;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .homepage_cards_container {
+    margin-top: 250px;
+    background-color: #dd695d;
+    height: 260px;
+  }
+
+  .homepage_card {
+    width: 160px;
+    height: 160px;
+    background: linear-gradient(#fff, 95%, rgba(151, 144, 144, 0.8));
+    border-radius: 15px 15px 0 0;
+  }
+}
+
+.homepage_footer_title {
+  color: #fff;
+  font-weight: 700;
+  font-family: "NotoSansKRR";
+}
+
+.homepage_footer_sub_text {
+  color: #fff;
+  font-weight: 400;
+  font-family: "NotoSansKRR";
+}
+
+@media screen and (max-width: 767px) {
+  .homepage_cards_container {
+    margin-top: 450px;
+    background-color: #dd695d;
+    height: 50%;
+    padding: 0 0 0 18px;
+  }
+  .homepage_cards_container .row {
+    height: 100%;
+  }
+  .homepage_card {
+    width: 250px;
+    height: 200px;
+    background: linear-gradient(#fff, 95%, rgba(151, 144, 144, 0.8));
+    border-radius: 15px 15px 0 0;
+  }
+  .homepage_footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -70px;
+    padding-bottom: 30px;
+  }
+  .homepage_footer_title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .homepage_footer_sub_text {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #fff;
+    margin-top: 5px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .homepage_cards_container {
+    margin-top: 400px;
+    background-color: #dd695d;
+    height: 100%;
+  }
+  .homepage_card {
+    width: 60vw;
+    background: linear-gradient(#fff, 95%, rgba(151, 144, 144, 0.8));
+    border-radius: 15px 15px 0 0;
+    margin-left: 10vw;
+  }
+  .homepage_footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    padding-bottom: 30px;
+  }
+  .homepage_footer_title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .homepage_footer_sub_text {
+    font-size: 0.6rem;
+    font-weight: 400;
+    color: #fff;
+    margin-top: 5px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .homepage_cards_container {
+    margin-top: 320px;
+  }
+  .homepage_card {
+    height: 180px;
+    width: 220px;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .homepage_card {
+    width: 60vw;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .homepage_footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+  }
+  .homepage_footer_title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+    font-weight: 700;
+    font-family: "NotoSansKRR";
+  }
+
+  .homepage_footer_sub_text {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #fff;
+    margin-top: 5px;
+    font-weight: 400;
+    font-family: "NotoSansKRR";
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .homepage_cards_container {
+    margin-top: 250px;
+    background-color: #dd695d;
+    height: 280px;
+  }
+
+  .homepage_card {
+    width: 240px;
+    height: 200px;
+    background: linear-gradient(#fff, 95%, rgba(151, 144, 144, 0.8));
+    border-radius: 15px 15px 0 0;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .homepage_footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 120px; */
+  }
+  .homepage_footer_title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .homepage_footer_sub_text {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #fff;
+    margin-top: 5px;
+  }
+}
+
+/* tablet */
+@media screen and (min-height: 1000px) and (min-width: 768px) {
+  .homepage_sub_text {
+    font-size: 1.2rem;
+  }
+
+  .homepage_info_container_content img {
+    height: 400px;
+    width: 100%;
+  }
+
+  .homepage_cards_container {
+    margin-top: 150px;
+    background-color: #e95252;
+    height: 100%;
+    padding: 0 0 50px 0;
+  }
+
+  .homepage_cards_container .row {
+    height: 50px;
+  }
+
+  .homepage_card img {
+    height: 40px;
+    width: 60px;
+  }
+
+  .homepage_card {
+    height: 160px;
+    width: 150px;
+    background: linear-gradient(#fff, 95%, rgba(151, 144, 144, 0.8));
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -80px;
+  }
+}
+
+/* --------------------------------timeline-------------------------------------- */
+.wrapper {
+  max-width: 1080px;
+  margin: 0px auto;
+  padding: 100px 20px 0 20px;
+  position: relative;
+}
+
+.wrapper .center-line {
+  position: absolute;
+  height: 98%;
+  width: 2.5px;
+  background: rgb(179, 175, 175);
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+}
+
+.wrapper .section_row {
+  display: flex;
+}
+
+.wrapper .section_row-1 {
+  justify-content: flex-start;
+}
+
+.wrapper .section_row-2 {
+  justify-content: flex-end;
+}
+
+.wrapper .section_row section {
+  width: calc(50% - 40px);
+  padding: 35px 50px;
+  position: relative;
+}
+
+.wrapper .section_row section::before {
+  position: absolute;
+  content: "";
+  height: 1.5px;
+  width: 50px;
+  background: rgb(179, 175, 175);
+  top: 47px;
+}
+
+.section_row-1 section::before {
+  right: -7px;
+}
+
+.section_row-2 section::before {
+  left: -7px;
+}
+
+.section_row section img {
+  height: 38px;
+  width: 38px;
+}
+
+.section_row section .icon {
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  object-fit: contain;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section_row-1 section .icon {
+  top: 15px;
+  right: -75px;
+}
+
+.section_row-2 section .icon {
+  top: 15px;
+  left: -75px;
+}
+
+.section_row section .details {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.section_row section .details_even {
+  display: flex;
+  align-items: center;
+}
+
+.section_row section .details .title {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-family: "NotoSansKRR";
+}
+
+.section_row section .details_even .title {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-family: "NotoSansKRR";
+}
+
+.section_row section p {
+  font-size: 1rem;
+  /* margin: 5px 0 10px 0; */
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-weight: 400;
+  font-family: "NotoSansKRR";
+}
+
+.section_row section span {
+  font-size: 1rem;
+  /* margin: 5px 0 10px 0; */
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-family: "NotoSansKRR";
+}
+
+.timeline_number {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: red;
+  font-weight: 700;
+  font-family: "NotoSansKRR";
+}
+
+@media (max-width: 790px) {
+  .wrapper .center-line {
+    left: 40px;
+  }
+  .wrapper .section_row {
+    margin: 30px 0 3px 60px;
+  }
+  .wrapper .section_row section {
+    width: 100%;
+  }
+  .section_row-1 section::before {
+    left: -7px;
+  }
+  .section_row-1 section .icon {
+    left: -75px;
+  }
+  .section_row section .details {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .section_row section p {
+    font-size: 1rem;
+    /* margin: 5px 0 10px 0; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 440px) {
+  .wrapper .center-line,
+  .section_row section::before,
+  .section_row section .icon {
+    display: none;
+  }
+  .wrapper .section_row {
+    margin: 0;
+    background-color: #fff;
+    margin-top: 8px;
+  }
+  .wrapper {
+    padding: 20px;
+  }
+}
+
+/* --------------------------------footer-------------------------------------- */
+.footer {
+  display: flex;
+  padding: 25px 20px 25px 50px;
+  width: 100%;
+  background-color: #d2d2d2;
+}
+
+.footer_image_container {
+  display: flex;
+  width: 15%;
+}
+
+.footer_image_container img {
+  height: 20px;
+  width: 133px;
+  margin-right: 10px;
+  margin-top: 2px;
+}
+
+.footer_image_container div {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.footer_info_container {
+  width: 65%;
+}
+
+.footer_info_container p {
+  font-size: 0.8rem;
+  font-weight: 400;
+  font-family: "NotoSansKRR";
+}
+
+.footer_buttons_container {
+  display: flex;
+  width: 20%;
+  align-items: flex-end;
+  padding-bottom: 15px;
+  justify-content: flex-end;
+}
+
+.footer_buttons_container div {
+  margin-right: 20px;
+  text-decoration: underline;
+  font-size: 0.8rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: "NotoSansKRR";
+  opacity: 0.8;
+}
+
+.footer_buttons_container div:hover {
+  opacity: 1;
+}
+
+@media screen and (max-width: 991px) {
+  .footer {
+    padding: 20px;
+    display: block;
+  }
+  .footer_image_container {
+    width: 100%;
+  }
+  .footer_info_container {
+    width: 100%;
+    margin-top: 15px;
+  }
+  .footer_buttons_container {
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 15px;
+  }
+}

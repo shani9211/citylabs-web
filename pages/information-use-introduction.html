@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Information Use</title>
+
+    <link rel="stylesheet" href="../styles/information-use-introduction.css" />
+
+    <link
+      rel="shortcut icon"
+      href="../assets/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <!-- Bootstrap -->
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!----------------------------------Navbar---------------------------------------->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
+      <div class="container-fluid navbar_container">
+        <img
+          src="../assets/header_image.svg"
+          alt="header_image"
+          class="header_image"
+        />
+
+        <a class="navbar-brand" href="/" style="font-size: 1.375rem">
+          우체국통합포털
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown active">
+              <a
+                class="nav-link"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                서비스 소개
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../pages/service-introduction.html"
+                    >소개</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item active_sub_item"
+                    href="../pages/information-use-introduction.html"
+                    >이용안내</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                법인 서비스
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="/">소개</a></li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../pages/service-application.html"
+                    >법인정보</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../pages/user-management.html"
+                    >사용자관리</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../pages/group-management.html"
+                    >그룹관리</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../pages/authentication-management.html"
+                    >인증정보</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                KP-DID API
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../pages/kpdid-api-introduction.html"
+                    >소개</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../pages/kpdid-api-documents.html"
+                    >API 목록
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                고객센터
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../pages/service-center-notice.html"
+                    >공지사항</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../pages/service-center-faq.html"
+                    >FAQ</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <img src="../assets/logout_image.svg" alt="logout_image" />
+            <div>로그인</div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- section_title_container -->
+    <section class="section_title_container">
+      <div class="navigation_banner">
+        <img
+          src="../assets/navbanner_home_icon.svg"
+          alt="navbanner_home_icon"
+          style="margin-bottom: 2px"
+        />
+
+        <div>
+          메인
+          <img
+            src="../assets/navbanner_arrow_icon.svg"
+            style="margin-bottom: 3px"
+            alt="navbanner_arrow_icon"
+          />
+        </div>
+        <div>
+          서비스소개
+          <img
+            src="../assets/navbanner_arrow_icon.svg"
+            style="margin-bottom: 3px"
+            alt="navbanner_arrow_icon"
+          />
+        </div>
+        <div style="opacity: 1">소개이용안내</div>
+      </div>
+
+      <div class="container">
+        <div class="section_title">이용안내</div>
+        <div class="section_subtitle">우체국통합포털 서비스 이용안내</div>
+      </div>
+    </section>
+
+    <!-------------------------------Section content--------------------------------------------->
+    <section class="information_use_content_container">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="information_side_menu">
+              <div class="side_menu_title" style="border-radius: 8px 8px 0 0">
+                개인
+              </div>
+
+              <div class="menu_sub_items">
+                <div class="active">1. 우정서비스앱 로그인</div>
+                <div>2. PC웹 간편 로그인</div>
+              </div>
+
+              <div class="side_menu_title">법인</div>
+
+              <div class="menu_sub_items">
+                <div>1. 법인DID발급신청</div>
+                <div>2. 법인회원 가입하기</div>
+                <div>3. 법인 로그인</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-9">
+            <div class="information_images_container">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="images_container">
+                      <img
+                        src="../assets/information_use_image1.svg"
+                        alt="information_use_image1"
+                      />
+
+                      <p>1</p>
+
+                      <div>
+                        우체국 <br />
+                        통합인증앱 로그인
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="images_container">
+                      <img
+                        src="../assets/information_use_image2.png"
+                        alt="information_use_image2"
+                        id="information_use_image2"
+                      />
+
+                      <p>2</p>
+
+                      <div>
+                        원하시는 <br />
+                        서비스 터치(실행)
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="images_container">
+                      <img
+                        src="../assets/information_use_image3.svg"
+                        alt="information_use_image3"
+                      />
+
+                      <p>3</p>
+
+                      <div>
+                        해당 서비스 앱 <br />
+                        실행 & 로그인
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!----------------------------------Footer---------------------------------------->
+    <footer class="footer">
+      <!-- <div class="footer_image_container">
+        <img src="../assets/footer_logo.png" alt="logo" />
+        <div>우정사업본부</div>
+      </div> -->
+
+      <div class="footer_image_container">
+        <img src="../assets/footer_logo.svg" alt="logo" />
+      </div>
+
+      <div class="footer_info_container">
+        <p>
+          (30114) 세종특별자치시 도움5로 19 (어진동)사업자등록번호
+          101-83-02925E-mail webpost@koreapost.go.kr
+          <br />
+          고객센터(우편 1588-1300, 예금 1599-1900, 보험 1599-0100), FAX :
+          0505-005-1024, 당직실 : 044-200-8841 (평일 야간, 공휴일)
+          <br />
+          Copyright⒞2016 KOREA POST(Office of postal service). All rights
+          reserved.
+        </p>
+      </div>
+
+      <div class="footer_buttons_container">
+        <div>이용약관</div>
+        <div>개인정보처리방침</div>
+      </div>
+    </footer>
+  </body>
+</html>

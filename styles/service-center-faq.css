@@ -1,0 +1,411 @@
+/* --------------------------------fonts-------------------------------------- */
+@font-face {
+  font-family: "NotoSansKRB";
+  src: url("../assets/fonts/NotoSansKR-Bold.otf");
+}
+@font-face {
+  font-family: "NotoSansKRM";
+  src: url("../assets/fonts/NotoSansKR-Medium.otf");
+}
+@font-face {
+  font-family: "NotoSansKRR";
+  src: url("../assets/fonts/NotoSansKR-Regular.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* --------------------------------navbar-------------------------------------- */
+.navbar {
+  padding: 12px;
+}
+
+.navbar_container {
+  padding: 6px 0;
+}
+.header_image {
+  height: 28px;
+  width: 56px;
+}
+
+.navbar-brand {
+  font-weight: 500;
+  margin-left: 5px;
+  font-family: "NotoSansKRM";
+}
+
+@media screen and (min-width: 991px) {
+  .navbar-nav {
+    margin-left: 20px;
+  }
+  .navbar-nav > li {
+    margin-left: 40px;
+    font-size: 1.25rem;
+    font-family: "NotoSansKRR";
+  }
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+.navbar-nav > li {
+  font-size: 1.25rem;
+  font-family: "NotoSansKRR";
+}
+
+.dropdown-menu > li > a:active {
+  color: #dd695d;
+  background-color: transparent;
+  text-decoration: underline;
+  opacity: 1;
+}
+
+.dropdown-menu > li > a {
+  font-family: "NotoSansKRR";
+  opacity: 0.5;
+  font-size: 1.25rem;
+}
+
+.navbar-nav .active_sub_item {
+  font-family: "NotoSansKRM";
+  opacity: 0.8;
+}
+
+.navbar-nav .active {
+  font-weight: bold;
+  font-family: "NotoSansKRM";
+}
+
+.navbar-nav > li:hover {
+  font-family: "NotoSansKRR";
+  font-size: 1.25rem;
+}
+
+.dropdown-item {
+  font-family: "NotoSansKRR";
+  font-size: 1rem;
+  font-weight: 200;
+  opacity: 0.8;
+}
+
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+
+.d-flex img {
+  height: 21px;
+  width: 23px;
+}
+
+.d-flex div {
+  margin-left: 10px;
+  font-family: "NotoSansKRM";
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+.d-flex:hover {
+  cursor: pointer;
+}
+
+/* ----------------------------------section_title_container---------------------------------------- */
+
+.section_title_container {
+  /* background: url("../assets/service-center-faq.svg") no-repeat; */
+  background: url("../assets/service-center-faq.png") no-repeat;
+  width: 100%;
+  background-size: cover;
+  padding: 0 0 32px 0;
+}
+
+.navigation_banner {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 120px;
+  display: flex;
+  align-items: flex-end;
+  padding: 12px 25px;
+}
+
+.navigation_banner div {
+  margin-left: 9px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 200;
+  opacity: 0.5;
+  font-family: "NotoSansKRR";
+}
+
+@media screen and (max-width: 575px) {
+  .navbar {
+    padding: 0;
+  }
+
+  .navigation_banner {
+    padding: 12px;
+  }
+}
+
+.section_title {
+  margin-top: 104px;
+  font-size: 1.75rem;
+  font-family: "NotoSansKRM";
+  font-weight: 500;
+  color: #fff;
+}
+
+.section_input_container {
+  margin-top: 14px;
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.section_input_container input {
+  width: 100%;
+  height: 54px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  outline: none;
+  border: transparent;
+  color: #fff;
+  font-size: 1.125rem;
+  font-family: "NotoSansKRR";
+  font-weight: 400;
+  padding: 0 24px;
+}
+
+.section_input_container img {
+  position: absolute;
+  right: 0;
+  margin-right: 24px;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #d2d2d2;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #d2d2d2;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #d2d2d2;
+}
+
+/* -------------------------------------------------- Section content -------------------------------------------- */
+.service_center_table_section_container {
+  padding: 50px 0;
+}
+
+.table_tabs_container {
+  display: flex;
+}
+
+.table_tabs_container div {
+  font-size: 1.375rem;
+  font-family: "NotoSansKRR";
+  font-weight: 400;
+  color: #bababa;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.table_tabs_container .active {
+  font-size: 1.375rem;
+  font-family: "NotoSansKRR";
+  font-weight: 400;
+  color: #dd695d;
+  border-bottom: 3px solid #dd695d;
+  padding-bottom: 16px;
+}
+
+@media screen and (max-width: 575px) {
+  .table_tabs_container div {
+    font-size: 1rem;
+  }
+
+  .table_tabs_container .active {
+    font-size: 1rem;
+  }
+}
+
+.dark_line {
+  height: 2px;
+  width: 100%;
+  background-color: #909090;
+}
+
+/* table */
+.table > thead > tr > th {
+  padding: 18px 0;
+  text-align: center;
+  font-size: 1rem;
+  color: #909090;
+  font-family: "NotoSansKRR";
+  font-weight: 200;
+  white-space: nowrap;
+}
+
+.table > tbody > tr > td {
+  padding: 18px 0;
+  text-align: center;
+  font-size: 1.063rem;
+  color: #383838;
+  font-family: "NotoSansKRR";
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.faq_row:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 991px) {
+  .table > thead > tr > th {
+    padding: 18px 2px;
+    font-size: 0.8rem;
+  }
+
+  .table > tbody > tr > td {
+    padding: 18px 2px;
+    font-size: 0.8rem;
+  }
+}
+
+/* ------------------------------------------------FAQ description--------------------------------------  */
+.faq_description_container {
+  padding: 50px 0;
+}
+
+.description_message {
+  border-bottom: 1px solid #d2d2d2;
+  padding-bottom: 100px;
+}
+
+.description_message div {
+  font-size: 1.25rem;
+  font-family: "NotoSansKRR";
+  font-weight: 400;
+  margin-top: 34px;
+  color: #383838;
+}
+
+.description_message p {
+  font-size: 1rem;
+  font-family: "NotoSansKRR";
+  font-weight: 400;
+  margin: 25px 0 0 0;
+  color: #000000;
+}
+
+.faq_description_list_button_container {
+  width: 100%;
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+}
+
+.faq_description_list_button_container div {
+  height: 48px;
+  width: 127px;
+  background-color: #dd695d;
+  color: #fff;
+  font-size: 1.125rem;
+  font-family: "NotoSansKRR";
+  font-weight: 400;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+/* -----------------------------------------------datatable--------------------------------------------------------------------- */
+
+label {
+  display: none !important;
+}
+
+table.dataTable {
+  border-bottom: 1px solid #d2d2d2 !important;
+}
+
+table.dataTable thead th,
+table.dataTable thead td {
+  padding: 18px 0 !important;
+  border-bottom: 1px solid #d2d2d2 !important;
+}
+
+table.dataTable tbody th,
+table.dataTable tbody td {
+  padding: 18px 0 !important;
+  border-bottom: 1px solid #d2d2d2 !important;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+  float: none !important;
+  text-align: center !important;
+  padding-top: 1em !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  box-sizing: border-box;
+  display: inline-block;
+  min-width: 1.5em;
+  padding: 0.2em 0.6em !important;
+  margin-left: 2px;
+  text-align: center;
+  text-decoration: none !important;
+  cursor: pointer;
+  color: #383838 !important;
+  border: 1px solid transparent;
+  border-radius: 2px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  color: #383838 !important;
+  background-color: rgba(0, 0, 0, 0.4) !important;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, rgba(0, 0, 0, 0.4)),
+    color-stop(100%, rgba(0, 0, 0, 0.4))
+  ) !important;
+  background: -webkit-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.4) 100%
+  ) !important;
+  background: -moz-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.4) 100%
+  ) !important;
+  background: -o-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.4) 100%
+  ) !important;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.4) 100%
+  ) !important;
+}

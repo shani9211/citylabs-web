@@ -1,0 +1,339 @@
+/* --------------------------------fonts-------------------------------------- */
+@font-face {
+  font-family: "NotoSansKRB";
+  src: url("../assets/fonts/NotoSansKR-Bold.otf");
+}
+@font-face {
+  font-family: "NotoSansKRM";
+  src: url("../assets/fonts/NotoSansKR-Medium.otf");
+}
+@font-face {
+  font-family: "NotoSansKRR";
+  src: url("../assets/fonts/NotoSansKR-Regular.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* --------------------------------navbar-------------------------------------- */
+.navbar {
+  padding: 12px;
+}
+
+.navbar_container {
+  padding: 6px 0;
+}
+
+.header_image {
+  height: 28px;
+  width: 56px;
+}
+
+.navbar-brand {
+  font-weight: 500;
+  margin-left: 5px;
+  font-family: "NotoSansKRM";
+}
+
+@media screen and (min-width: 991px) {
+  .navbar-nav {
+    margin-left: 20px;
+  }
+  .navbar-nav > li {
+    margin-left: 40px;
+    font-size: 1.25rem;
+    font-family: "NotoSansKRR";
+  }
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+.navbar-nav > li {
+  font-size: 1.25rem;
+  font-family: "NotoSansKRR";
+}
+
+.dropdown-menu > li > a:active {
+  color: #dd695d;
+  background-color: transparent;
+  text-decoration: underline;
+  opacity: 1;
+}
+
+.dropdown-menu > li > a {
+  font-family: "NotoSansKRR";
+  opacity: 0.5;
+  font-size: 1.25rem;
+}
+
+.navbar-nav .active_sub_item {
+  font-family: "NotoSansKRM";
+  opacity: 0.8;
+}
+
+.navbar-nav .active {
+  font-weight: bold;
+  font-family: "NotoSansKRM";
+}
+
+.navbar-nav > li:hover {
+  font-family: "NotoSansKRR";
+  font-size: 1.25rem;
+}
+
+.dropdown-item {
+  font-family: "NotoSansKRR";
+  font-size: 1rem;
+  font-weight: 200;
+  opacity: 0.8;
+}
+
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+
+.d-flex img {
+  height: 21px;
+  width: 23px;
+}
+
+.d-flex div {
+  margin-left: 10px;
+  font-family: "NotoSansKRM";
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+.d-flex:hover {
+  cursor: pointer;
+}
+
+/* ----------------------------------section_title_container---------------------------------------- */
+
+.section_title_container {
+  /* background: url("../assets/authentication_management_section.svg") no-repeat; */
+  background: url("../assets/authentication_management_section.png") no-repeat;
+  width: 100%;
+  background-size: cover;
+  padding: 0 0 48px 0;
+}
+
+.navigation_banner {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 120px;
+  display: flex;
+  align-items: flex-end;
+  padding: 12px 25px;
+}
+
+.navigation_banner div {
+  margin-left: 9px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 200;
+  opacity: 0.5;
+  font-family: "NotoSansKRR";
+}
+
+@media screen and (max-width: 575px) {
+  .navbar {
+    padding: 0;
+  }
+
+  .navigation_banner {
+    padding: 12px;
+  }
+}
+
+.section_title {
+  margin-top: 104px;
+  font-size: 1.75rem;
+  font-family: "NotoSansKRM";
+  font-weight: 500;
+  color: #fff;
+}
+
+.section_subtitle {
+  margin-top: 1px;
+  font-size: 1.25rem;
+  font-family: "NotoSansKRR";
+  font-weight: 200;
+  color: #eaeaea;
+}
+
+@media screen and (max-width: 475px) {
+  .section_subtitle {
+    font-size: 0.9rem;
+  }
+}
+
+/* ----------------------------------section_content_container---------------------------------------- */
+.section_content_container {
+  width: 100%;
+  background-color: #fff;
+  padding: 45px 0;
+}
+
+.section_content_inputs_container {
+  display: flex;
+}
+
+/* @media screen and (max-width: 767px) {
+  .section_content_inputs_container {
+    display: block;
+  }
+} */
+
+.date_input_container {
+  position: relative;
+  margin-right: 8px;
+  height: 48px;
+  width: 219px;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.date_input_container input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: 1px solid #bababa;
+  color: #404050;
+  padding: 0 12px 0 18px;
+  border-radius: 4px;
+  font-family: "NotoSansKRR";
+  font-weight: 400;
+  font-size: 0.938rem;
+}
+
+.date_input_container img {
+  position: absolute;
+  right: 10px;
+}
+
+.section_content_inputs_container select {
+  width: 219px;
+  height: 48px;
+  outline: none;
+  border: 1px solid #bababa;
+  color: #404050;
+  padding: 0 22px 0 16px;
+  margin-right: 8px;
+  border-radius: 4px;
+  font-family: "NotoSansKRR";
+  font-weight: 400;
+  font-size: 0.938rem;
+  margin-top: 12px;
+}
+
+.section_content_inputs_container button {
+  height: 48px;
+  width: 95px;
+  border-radius: 4px;
+  font-family: "NotoSansKRR";
+  font-weight: 400;
+  font-size: 0.938rem;
+  margin-top: 12px;
+  background-color: #dd695d;
+  outline: none;
+  border: none;
+  color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  .section_content_inputs_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.certification_table_container {
+  margin-top: 45px;
+}
+
+.certification_table_container div {
+  color: #dd695d;
+  font-family: "NotoSansKRR";
+  font-weight: 400;
+  font-size: 1.375rem;
+}
+
+.dark_line {
+  height: 2px;
+  width: 100%;
+  background-color: #909090;
+  margin-top: 22px;
+}
+
+/* table */
+.table > thead > tr > th {
+  padding: 18px 0;
+  text-align: center;
+  width: 20%;
+  font-size: 1rem;
+  color: #909090;
+  font-family: "NotoSansKRR";
+  font-weight: 200;
+  white-space: nowrap;
+}
+
+.table > tbody > tr > td {
+  padding: 18px 0;
+  width: 20%;
+  text-align: center;
+  font-size: 1.063rem;
+  color: #383838;
+  font-family: "NotoSansKRR";
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.table > tbody > tr > td > input {
+  height: 20px;
+  width: 20px;
+}
+
+.table > tbody > tr > .table_red_text {
+  text-decoration: underline;
+  color: #dd695d;
+}
+
+@media screen and (max-width: 991px) {
+  .table > thead > tr > th {
+    padding: 18px 2px;
+    font-size: 0.7rem;
+  }
+
+  .table > tbody > tr > td {
+    padding: 18px 2px;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .table > tbody > tr > td {
+    padding: 18px 2px;
+    font-size: 0.7rem;
+  }
+}
+
+/* Date input */
+input[type="date"]:before {
+  content: attr(placeholder) !important;
+  color: #aaa;
+  margin-right: 0.5em;
+}
+input[type="date"]:focus:before,
+input[type="date"]:valid:before {
+  content: "";
+}

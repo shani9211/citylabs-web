@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KP-DID API Documents List</title>
+
+    <link rel="stylesheet" href="../styles/kpdid-api-documents.css" />
+
+    <link
+      rel="shortcut icon"
+      href="../assets/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <!-- Bootstrap -->
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!----------------------------------Navbar---------------------------------------->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
+      <div class="container-fluid navbar_container">
+        <img
+          src="../assets/header_image.svg"
+          alt="header_image"
+          class="header_image"
+        />
+
+        <a class="navbar-brand" href="/" style="font-size: 1.375rem">
+          우체국통합포털
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                서비스 소개
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../pages/service-introduction.html"
+                    >소개</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../pages/information-use-introduction.html"
+                    >이용안내</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                법인 서비스
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="/">소개</a></li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../pages/service-application.html"
+                    >법인정보</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../pages/user-management.html"
+                    >사용자관리</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../pages/group-management.html"
+                    >그룹관리</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../pages/authentication-management.html"
+                    >인증정보</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown active">
+              <a
+                class="nav-link"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                KP-DID API
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../pages/kpdid-api-introduction.html"
+                    >소개</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item active_sub_item"
+                    href="../pages/kpdid-api-documents.html"
+                    >API 목록
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                고객센터
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../pages/service-center-notice.html"
+                    >공지사항</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../pages/service-center-faq.html"
+                    >FAQ</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <img src="../assets/logout_image.svg" alt="logout_image" />
+            <div>로그인</div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- section_title_container -->
+    <section class="section_title_container">
+      <div class="navigation_banner">
+        <img
+          src="../assets/navbanner_home_icon.svg"
+          alt="navbanner_home_icon"
+          style="margin-bottom: 2px"
+        />
+
+        <div>
+          메인
+          <img
+            src="../assets/navbanner_arrow_icon.svg"
+            style="margin-bottom: 3px"
+            alt="navbanner_arrow_icon"
+          />
+        </div>
+        <div>
+          KP-DID API
+          <img
+            src="../assets/navbanner_arrow_icon.svg"
+            style="margin-bottom: 3px"
+            alt="navbanner_arrow_icon"
+          />
+        </div>
+        <div style="opacity: 1">API 목록</div>
+      </div>
+
+      <div class="container">
+        <div class="section_title">KP-DID API 문서 목록</div>
+      </div>
+    </section>
+
+    <!---------------------------------------------- section content ------------------------------------>
+    <section class="api_documents_content_container">
+      <div class="container">
+        <!-- Api Document list box -->
+        <div class="api_documents_box">
+          <div class="document_box_title_container">
+            <div class="document_box_title">KP-DID API 문서 목록</div>
+            <div class="document_box_title_button_container">
+              <span>API 이용가이드</span>
+              <div>다운로드</div>
+              <img src="../assets/kpdid_list_icon.svg" alt="list_icon" />
+            </div>
+          </div>
+
+          <div id="kpdid_api_document"></div>
+
+          <!-- <div class="api_single_document_container">
+            <p>우정사업정보센터 출입정보</p>
+            <div class="api_single_document_button_row">
+              <span>API 정보 요약</span>
+              <div class="api_single_document_download_container">
+                <div>다운로드</div>
+                <img src="../assets/download_icon.svg" alt="download_icon" />
+              </div>
+            </div>
+          </div>
+
+          <div class="api_single_document_container">
+            <p>우정사업정보센터 출입정보</p>
+            <div class="api_single_document_button_row">
+              <span>API 정보 요약</span>
+              <div class="api_single_document_download_container">
+                <div>다운로드</div>
+                <img src="../assets/download_icon.svg" alt="download_icon" />
+              </div>
+            </div>
+          </div>
+
+          <div class="api_single_document_container">
+            <p>우정사업정보센터 출입정보</p>
+            <div class="api_single_document_button_row">
+              <span>API 정보 요약</span>
+              <div class="api_single_document_download_container">
+                <div>다운로드</div>
+                <img src="../assets/download_icon.svg" alt="download_icon" />
+              </div>
+            </div>
+          </div>
+
+          <div class="api_single_document_container">
+            <p>우정사업정보센터 출입정보</p>
+            <div class="api_single_document_button_row">
+              <span>API 정보 요약</span>
+              <div class="api_single_document_download_container">
+                <div>다운로드</div>
+                <img src="../assets/download_icon.svg" alt="download_icon" />
+              </div>
+            </div>
+          </div> -->
+        </div>
+
+        <!-- API details -->
+        <div class="api_details_box_container hidden">
+          <div class="api_detail_title">KP-DID API 상세</div>
+
+          <div class="api_detail_info_container">
+            <div class="api_detail_info_title">우정사업정보센터 출입정보</div>
+            <div class="api_detail_info_sub_title">API 정보 요약</div>
+
+            <div class="row" style="margin-top: 10px">
+              <div class="col-md-6 column_info_container">
+                <div class="title_column_container">
+                  <div>제공기관</div>
+                  <div>API 유형</div>
+                  <div>활용신청 수</div>
+                  <div>등록일</div>
+                  <div>URL</div>
+                  <div>참고문서</div>
+                </div>
+
+                <div class="seperator_line"></div>
+
+                <div class="title_info_column_container">
+                  <div>우정사업본부</div>
+                  <div>LINK</div>
+                  <div>1000</div>
+                  <div>2021/08/10</div>
+                  <div>URL</div>
+                  <div>파일명 <span>다운로드</span></div>
+                </div>
+              </div>
+
+              <div class="col-md-6 column_info_container">
+                <div class="title_column_container">
+                  <div>관리부서명</div>
+                  <div>데이터포맷</div>
+                  <div>키워드</div>
+                  <div>수정일</div>
+                  <div>이용허락범위</div>
+                </div>
+
+                <div class="seperator_line_small"></div>
+
+                <div class="title_info_column_container">
+                  <div>정보전략팀</div>
+                  <div>XML</div>
+                  <div>정보/통신/정보검색/위치</div>
+                  <div>2021/08/23</div>
+                  <div>출처표시</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="list_button_container hidden">
+          <div>목록</div>
+        </div>
+      </div>
+    </section>
+
+    <!----------------------------------Footer---------------------------------------->
+    <footer class="footer">
+      <!-- <div class="footer_image_container">
+        <img src="../assets/footer_logo.png" alt="logo" />
+        <div>우정사업본부</div>
+      </div> -->
+
+      <div class="footer_image_container">
+        <img src="../assets/footer_logo.svg" alt="logo" />
+      </div>
+
+      <div class="footer_info_container">
+        <p>
+          (30114) 세종특별자치시 도움5로 19 (어진동)사업자등록번호
+          101-83-02925E-mail webpost@koreapost.go.kr
+          <br />
+          고객센터(우편 1588-1300, 예금 1599-1900, 보험 1599-0100), FAX :
+          0505-005-1024, 당직실 : 044-200-8841 (평일 야간, 공휴일)
+          <br />
+          Copyright⒞2016 KOREA POST(Office of postal service). All rights
+          reserved.
+        </p>
+      </div>
+
+      <div class="footer_buttons_container">
+        <div>이용약관</div>
+        <div>개인정보처리방침</div>
+      </div>
+    </footer>
+
+    <script src="../javascript/kpdid-api-documents.js"></script>
+  </body>
+</html>

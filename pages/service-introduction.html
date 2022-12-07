@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service Introduction</title>
+
+    <link rel="stylesheet" href="../styles/service-introduction.css" />
+
+    <link
+      rel="shortcut icon"
+      href="../assets//favicon.ico"
+      type="image/x-icon"
+    />
+
+    <!-- Bootstrap -->
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!----------------------------------Navbar---------------------------------------->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
+      <div class="container-fluid navbar_container">
+        <img
+          src="../assets/header_image.svg"
+          alt="header_image"
+          class="header_image"
+        />
+        <a class="navbar-brand" href="/" style="font-size: 1.375rem">
+          우체국통합포털
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown active">
+              <a
+                class="nav-link"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                서비스 소개
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a
+                    class="dropdown-item active_sub_item"
+                    href="../pages/service-introduction.html"
+                    >소개</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../pages/information-use-introduction.html"
+                    >이용안내</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                법인 서비스
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="/">소개</a></li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../pages/service-application.html"
+                    >법인정보</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../pages/user-management.html"
+                    >사용자관리</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../pages/group-management.html"
+                    >그룹관리</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../pages/authentication-management.html"
+                    >인증정보</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                KP-DID API
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../pages/kpdid-api-introduction.html"
+                    >소개</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../pages/kpdid-api-documents.html"
+                    >API 목록
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                고객센터
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../pages/service-center-notice.html"
+                    >공지사항</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../pages/service-center-faq.html"
+                    >FAQ</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <img src="../assets/logout_image.svg" alt="logout_image" />
+            <div>로그인</div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!----------------------------------Introduction section---------------------------------------->
+    <section class="introduction_section_container">
+      <div class="introduction_section_banner_container">
+        <img
+          src="../assets/navbanner_home_icon.svg"
+          alt="navbanner_home_icon"
+          style="margin-bottom: 2px"
+        />
+
+        <div>
+          메인
+          <img
+            src="../assets/navbanner_arrow_icon.svg"
+            style="margin-bottom: 3px"
+            alt="navbanner_arrow_icon"
+          />
+        </div>
+        <div>
+          서비스소개
+          <img
+            src="../assets/navbanner_arrow_icon.svg"
+            style="margin-bottom: 3px"
+            alt="navbanner_arrow_icon"
+          />
+        </div>
+        <div style="opacity: 1">소개</div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-sm-12 introduction_text_container">
+            <div class="introduction_text_container_title">
+              블록체인 기반 <br />
+              우체국 DID를 이용한 <br />
+              모바일 인증서비스
+            </div>
+
+            <span>One ID, All Postal Service.</span>
+            <div class="introduction_section_text_underline"></div>
+
+            <p>하나의 우체국 DID로 모든 우정서비스를 이용할 수 있습니다.</p>
+          </div>
+
+          <div class="col-md-6 col-sm-12 introduction_image_container">
+            <img src="../assets/service_intro.svg" alt="service_intro" />
+          </div>
+        </div>
+      </div>
+      <div class="introduction_section_footer_text_container">
+        <div class="container">
+          <div>서비스 소개</div>
+          <div class="introduction_section_footer_text_underline"></div>
+        </div>
+      </div>
+    </section>
+
+    <!----------------------------------Integrated Login section section---------------------------------------->
+    <section class="integrated_login_section_container">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-sm-12 integrated_login_text_container">
+            <span>01.</span>
+
+            <div class="integrated_login_title_container">
+              <div>통합로그인</div>
+              <img
+                src="../assets/fingerprint_icon.svg"
+                alt="fingerprint_icon"
+              />
+            </div>
+
+            <p>
+              각 서비스마다 로그인 해야 하는 <br />
+              불편함 없이, 우체국 앱 하나로 <br />
+              로그인부터 조회까지 한번에!
+            </p>
+          </div>
+
+          <div class="col-md-6 col-sm-12 integrated_login_image_container">
+            <img
+              src="../assets/integrated_login_section_image.svg"
+              alt="integrated_login_section_image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!----------------------------------QR Login section---------------------------------------->
+    <section class="QR_login_section_container">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-sm-12 QR_login_image_container">
+            <img
+              src="../assets/QR_login_section_image.svg"
+              alt="QR_login_section_image"
+            />
+          </div>
+
+          <div class="col-md-6 col-sm-12 QR_login_text_container">
+            <span>02.</span>
+
+            <div class="QR_login_title_container">
+              <div class="QR_login_title_image_container">
+                <img src="../assets/QR_code_icon.svg" alt="fingerprint_icon" />
+              </div>
+              <div>QR코드 로그인</div>
+            </div>
+
+            <p>
+              각 우정서비스 PC화면에서도 <br />
+              우체국 통합인증앱으로 <br />
+              간편하게 로그인!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!----------------------------------use_history_section---------------------------------------->
+    <section class="use_history_section_container">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-sm-12 use_history_text_container">
+            <span>03.</span>
+
+            <div class="use_history_title_container">
+              <div>
+                이용내역을 <br />
+                한곳에서!
+              </div>
+
+              <div class="use_history_title_image_container">
+                <img src="../assets/menu_icon.svg" alt="menu_icon" />
+              </div>
+            </div>
+
+            <p>
+              우체국 통합인증앱에서 각 <br />
+              우정서비스 이용내역 <br />
+              조회까지 한번에!
+            </p>
+          </div>
+
+          <div class="col-md-6 col-sm-12 use_history_image_container">
+            <img
+              src="../assets/use_history_section_image.svg"
+              alt="use_history_section_image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!----------------------------------My data section---------------------------------------->
+    <section class="my_data_section_container">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-sm-12 my_data_image_container">
+            <img
+              src="../assets/my_data_section_image.svg"
+              alt="my_data_section_image"
+            />
+          </div>
+
+          <div class="col-md-6 col-sm-12 my_data_text_container">
+            <span>04.</span>
+
+            <div class="my_data_title_container">
+              <div class="my_data_title_image_container">
+                <img src="../assets/graph_icon.svg" alt="fingerprint_icon" />
+              </div>
+              <div>마이데이터</div>
+            </div>
+
+            <p>
+              내 자산 내역부터 <br />
+              신용점수, 대출 등 각종 <br />
+              금융자산에 대한 데이터를 <br />
+              한눈에 확인하고 관리하세요.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!----------------------------------Footer---------------------------------------->
+    <footer class="footer">
+      <!-- <div class="footer_image_container">
+        <img src="../assets/footer_logo.png" alt="logo" />
+        <div>우정사업본부</div>
+      </div> -->
+
+      <div class="footer_image_container">
+        <img src="../assets/footer_logo.svg" alt="logo" />
+      </div>
+
+      <div class="footer_info_container">
+        <p>
+          (30114) 세종특별자치시 도움5로 19 (어진동)사업자등록번호
+          101-83-02925E-mail webpost@koreapost.go.kr
+          <br />
+          고객센터(우편 1588-1300, 예금 1599-1900, 보험 1599-0100), FAX :
+          0505-005-1024, 당직실 : 044-200-8841 (평일 야간, 공휴일)
+          <br />
+          Copyright⒞2016 KOREA POST(Office of postal service). All rights
+          reserved.
+        </p>
+      </div>
+
+      <div class="footer_buttons_container">
+        <div>이용약관</div>
+        <div>개인정보처리방침</div>
+      </div>
+    </footer>
+  </body>
+</html>
